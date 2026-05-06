@@ -1,0 +1,90 @@
+# ============================================================
+# 报名工具配置文件
+# 修改这个文件就能适配不同的报名场景，无需改代码！
+# ============================================================
+
+event:
+  name: "AI创新大赛报名"
+  description: "小米集团2026年AI创新大赛，欢迎各部门踊跃报名！"
+  logo: ""
+  deadline: "2026-05-15 23:59:59"
+
+server:
+  port: 3000
+
+admin:
+  password: "admin123"
+
+fields:
+  - name: "team_name"
+    label: "团队名称"
+    type: "text"
+    required: true
+    placeholder: "请输入你的团队名称"
+
+  - name: "leader_name"
+    label: "队长姓名"
+    type: "text"
+    required: true
+    placeholder: "请输入队长真实姓名"
+
+  - name: "leader_email"
+    label: "队长邮箱"
+    type: "email"
+    required: true
+    placeholder: "请输入队长企业邮箱"
+
+  - name: "leader_phone"
+    label: "队长手机号"
+    type: "phone"
+    required: true
+    placeholder: "请输入队长手机号"
+
+  - name: "department"
+    label: "所属部门"
+    type: "select"
+    required: true
+    options:
+      - "互联网业务部"
+      - "手机部"
+      - "AIoT平台部"
+      - "中国区"
+      - "国际业务部"
+      - "集团技术委员会"
+      - "其他"
+
+  - name: "member_count"
+    label: "团队人数"
+    type: "number"
+    required: true
+
+  - name: "members"
+    label: "团队成员"
+    type: "textarea"
+    required: true
+
+  - name: "project_name"
+    label: "项目名称"
+    type: "text"
+    required: true
+
+  - name: "project_desc"
+    label: "项目简介"
+    type: "textarea"
+    required: true
+
+  - name: "track"
+    label: "参赛赛道"
+    type: "select"
+    required: true
+    options:
+      - "大模型应用"
+      - "智能硬件"
+      - "效率工具"
+      - "用户体验"
+      - "开放赛道"
+
+grouping:
+  enabled: true
+  field: "track"
+  label: "赛道"
